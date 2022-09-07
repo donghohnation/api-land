@@ -1,3 +1,39 @@
+document.addEventListener("DOMContentLoaded", () => {
+	// DOM elements
+	const button = document.querySelector("button");
+	const quote = document.querySelector("blockquote p");
+	const cite = document.querySelector("blockquote cite");
+
+	async function updateQuote() {
+		// Fetch a random quote from the Quotable API
+		const response = await fetch("https://api.quotable.io/random");
+		const data = await response.json();
+		if (response.ok) {
+			// Update DOM elements
+			quote.textContent = data.content;
+			cite.textContent = data.author;
+		} else {
+			quote.textContent = "An error occured";
+			console.log(data);
+		}
+	}
+
+	// Attach an event listener to the `button`
+	button.addEventListener("click", updateQuote);
+
+	// call updateQuote once when page loads
+	updateQuote();
+});
+
+
+
+
+
+
+
+
+
+
 const quote = document.querySelector("#quote");
 const author = document.querySelector("#author");
 const btn = document.querySelector("#btn");
@@ -70,68 +106,67 @@ function getAdvice() {
 
 
 
+// const enter = document.getElementById("cityInp")
+// enter.addEventListener("keypress", (event) => {
+// 	if (event.keyCode === 13) {
+// 		getInfo()
+// 	}
+// })
+
+// // enter city and click search, header2 will show searched city
+
+// const searchbtn = document.getElementById("searchbtn")
+// searchbtn.addEventListener("click", getInfo);
+
+// function getInfo() {
+// 	const searchedCity = document.getElementById("cityInp");
+// 	const cityName = document.getElementById("cityName");
+// 	cityName.innerHTML = `${searchedCity.value}`;
+
+// 	// ______________________________________________
+
+// 	fetch(`https://api.openweathermap.org/data/2.5/weather?q=${searchedCity.value}&units=imperial&appid=f419cd27b5d7777610c83ec9680dce19`)
+// 		.then(response => response.json())
+// 		.then(data => {
+// 			document.getElementById("currentTemp").innerHTML = `current temp: ${data.main.temp.toFixed(0)}°F`
+// 			document.getElementById("feelsLike").innerHTML = `feels like: ${data.main.feels_like.toFixed(0)}°F`
+// 			document.getElementById("imgM").src = "http://openweathermap.org/img/w/" + data.weather.icon
+// 		})
 
 
+// 	fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${searchedCity.value}&units=imperial&appid=f419cd27b5d7777610c83ec9680dce19`)
+// 		.then(response => response.json())
+// 		.then(data => {
+// 			for (i = 0; i < 5; i++) {
+// 				document.getElementById("day" + (i + 1) + "min").innerHTML = "Min: " + Number(data.list[i].main.temp_min).toFixed(0) + "°F";
+// 			}
+// 			for (i = 0; i < 5; i++) {
+// 				document.getElementById("day" + (i + 1) + "max").innerHTML = "Max: " + Number(data.list[i].main.temp_max).toFixed(0) + "°F";
+// 			}
+// 			for (i = 0; i < 5; i++) {
+// 				document.getElementById("img" + (i + 1)).src = " http://openweathermap.org/img/w/" + data.list[i].weather[0].icon + ".png";
+// 			}
+// 		})
 
-const enter = document.getElementById("cityInp")
-enter.addEventListener("keypress", (event) => {
-	if (event.keyCode === 13) {
-		getInfo()
-	}
-})
-
-// enter city and click search, header2 will show searched city
-
-const searchbtn = document.getElementById("searchbtn")
-searchbtn.addEventListener("click", getInfo);
-
-function getInfo() {
-	const searchedCity = document.getElementById("cityInp");
-	const cityName = document.getElementById("cityName");
-	cityName.innerHTML = `${searchedCity.value}`;
-
-	// ______________________________________________
-
-	fetch(`https://api.openweathermap.org/data/2.5/weather?q=${searchedCity.value}&units=imperial&appid=f419cd27b5d7777610c83ec9680dce19`)
-		.then(response => response.json())
-		.then(data => {
-			document.getElementById("currentTemp").innerHTML = `current temp: ${data.main.temp.toFixed(0)}°F`
-			document.getElementById("feelsLike").innerHTML = `feels like: ${data.main.feels_like.toFixed(0)}°F`
-			document.getElementById("imgM").src = "http://openweathermap.org/img/w/" + data.weather.icon
-		})
+// 		.catch(err => ("something went wrong"))
+// }
 
 
-	fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${searchedCity.value}&units=imperial&appid=f419cd27b5d7777610c83ec9680dce19`)
-		.then(response => response.json())
-		.then(data => {
-			for (i = 0; i < 5; i++) {
-				document.getElementById("day" + (i + 1) + "min").innerHTML = "Min: " + Number(data.list[i].main.temp_min).toFixed(0) + "°F";
-			}
-			for (i = 0; i < 5; i++) {
-				document.getElementById("day" + (i + 1) + "max").innerHTML = "Max: " + Number(data.list[i].main.temp_max).toFixed(0) + "°F";
-			}
-			for (i = 0; i < 5; i++) {
-				document.getElementById("img" + (i + 1)).src = " http://openweathermap.org/img/w/" + data.list[i].weather[0].icon + ".png";
-			}
-		})
+// const d = new Date();
+// const weekday = ["sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday"];
 
-		.catch(err => ("something went wrong"))
-}
-const d = new Date();
-const weekday = ["sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday"];
+// function checkDay(day) {
+// 	if (day + d.getDay() > 6) {
+// 		return day + d.getDay() - 7;
+// 	}
+// 	else {
+// 		return day + d.getDay();
+// 	}
+// }
 
-function checkDay(day) {
-	if (day + d.getDay() > 6) {
-		return day + d.getDay() - 7;
-	}
-	else {
-		return day + d.getDay();
-	}
-}
-
-for (i = 0; i < 5; i++) {
-	document.getElementById("day" + (i + 1)).innerHTML = weekday[checkDay(i)];
-}
+// for (i = 0; i < 5; i++) {
+// 	document.getElementById("day" + (i + 1)).innerHTML = weekday[checkDay(i)];
+// }
 
 
 
@@ -152,14 +187,14 @@ document.addEventListener("DOMContentLoaded", init);
 function init() {
 	document.getElementById("btnSearch").addEventListener("click", ev => {
 		ev.preventDefault(); //to stop the page reload
-		let url = `https://api.giphy.com/v1/gifs/search?api_key=${APIKEY}&limit=9&q=`;
+		let url = `https://api.giphy.com/v1/gifs/search?api_key=${APIKEY}&limit=15&q=`;
 		let str = document.getElementById("search").value.trim();
 		url = url.concat(str);
 		console.log(url);
 		fetch(url)
 			.then(response => response.json())
 			.then(content => {
-				for (var i = 0; i < 10; i++) {
+				for (var i = 0; i < 16; i++) {
 					console.log(content.data);
 					console.log("META", content.meta);
 					document.getElementById("gif" + (i + 1)).src = content.data[i].images.downsized.url;
@@ -209,7 +244,8 @@ function loadImg(e) {
 const get_meal_btn = document.getElementById('get_meal');
 const meal_container = document.getElementById('meals');
 
-get_meal_btn.addEventListener('click', () => {
+get_meal_btn.addEventListener('click', (e) => {
+	e.preventDefault();
 
 	fetch('https://www.themealdb.com/api/json/v1/1/random.php')
 		.then(res => res.json())
@@ -235,7 +271,7 @@ window.onload = () => {
 
 const createMeal = (meal) => {
 
-	
+
 	const ingredients = [];
 	// Get all ingredients from the object. Up to 20
 	for (let i = 1; i <= 40; i++) {
@@ -248,31 +284,40 @@ const createMeal = (meal) => {
 	}
 
 	const newInnerHTML = `
-    <div class="row">
-      <div class="columns five">
-        <img src="${meal.strMealThumb}" alt="Meal Image">
+    <div class="row d-flex justify-content-center resultsmeal">
+
+
+	 <div class="col-5">
+
+
+      	<h4 class="mealtitle">${meal.strMeal}</h4>
+
+        <img class="mealimg" src="${meal.strMealThumb}" alt="Meal Image">
+
         ${meal.strCategory ? `<p><strong>Category:</strong> ${meal.strCategory}</p>` : ''}
+
         ${meal.strArea ? `<p><strong>Area:</strong> ${meal.strArea}</p>` : ''}
+
         ${meal.strTags ? `<p><strong>Tags:</strong> ${meal.strTags.split(',').join(', ')}</p>` : ''}
+
         <h5>Ingredients:</h5>
         <ul>
           ${ingredients.map(ingredient => `<li>${ingredient}</li>`).join('')}
         </ul>
-      </div>
-      <div class="columns seven">
-        <h4>${meal.strMeal}</h4>
+        
         <p>${meal.strInstructions}</p>
+
+    	${meal.strYoutube ? `
+     	 <h5>Video Recipe</h5>
+     	 <div class="videoWrapper">
+        <iframe width="100%" height="315"
+        src="https://www.youtube.com/embed/${meal.strYoutube.slice(-11)}"></iframe>
+
+
       </div>
-    </div>
-    ${meal.strYoutube ? `
-    <div class="row">
-      <h5>Video Recipe</h5>
-      <div class="videoWrapper">
-        <iframe width="420" height="315"
-        src="https://www.youtube.com/embed/${meal.strYoutube.slice(-11)}">
-        </iframe>
-      </div>
-    </div>` : ''}
+
+
+	</div>` : ''}
   `;
 
 	meal_container.innerHTML = newInnerHTML;

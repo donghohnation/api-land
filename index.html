@@ -9,6 +9,7 @@
 	<link rel="stylesheet" href="./assets/reset.css">
 	<link rel="stylesheet" href="./assets/styles.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&display=swap" rel="stylesheet">
 	<title>QUO QUO</title>
 </head>
 
@@ -17,131 +18,154 @@
 <body>
 
 
-
-
-	<div class="container">
-		<div class="quote-box">
-			<p id="quote"></p>
-			<small id="author"></small>
-		</div>
-		<button id="btn">new quote</button>
+<div class="card">
+	<div class="card-body">
+		<blockquote class="blockquote mb-0">
+			<p>loading...</p>
+			<footer class="blockquote-footer">
+				<cite title="Source Title"></cite>
+			</footer>
+		</blockquote>
 	</div>
-
-
-
-
-
-
-	<div class="container">
-		<div class="advice-box">
-			<p id="advice"></p>
-		</div>
-		<button id="btnAdvice">new advice</button>
+	<div class="card-footer">
+		<button class="btn btn-primary">New Quote
 	</div>
+</div>
+</div>
 
 
 
 
 
-	<div>
-		<h1 id="main-title">Weather Forecast</h1>
-		<div id="searchCont">
-			<p id="inputCont">Search city: <input type="text" id="cityInp"><button id="searchbtn"><i
-						class="fa fa-search"></i></button></p>
+	<section>
+		<div class="container">
+			<div class="quote-box">
+				<p id="quote"></p>
+				<small id="author"></small>
+			</div>
+			<button id="btn">new quote</button>
+		</div>
+	</section>
 
-			<center>
-				<div class="cards1">
+
+
+
+	<section>
+		<div class="container">
+			<div class="advice-box">
+				<p id="advice"></p>
+			</div>
+			<button id="btnAdvice">new advice</button>
+		</div>
+	</section>
+
+
+
+	<!-- <section>
+		<div class="headrow row">
+
+
+			<div class="titlediv col-md-6">
+				<h1 class="headtitle">Weather</h1>
+			</div>
+
+
+			<div class="searchdiv col-md-6">
+				<input placeholder="SEARCH ANY CITY" class="search" id="cityInp" type="search" />
+				<button class="btnsearch" id="searchbtn"><i class="fa fa-search"></i></button>
+			</div>
+
+
+		</div>
+
+
+
+		<div class="row d-flex justify-content-center results">
+
+			<div class=" col-12">
+				<div class="card1 ">
 					<h2 id="cityName">City</h2>
 					<div class="imgM text-center"><img src="sunPH.png" class="imgClass" id="img1" alt="" width="150px">
 					</div>
 					<p class="current" id="currentTemp">current temp</p>
 					<p class="current" id="feelsLike">feels like</p>
 				</div>
-			</center>
+			</div>
 
-			<div id="weatherCont">
-				<div class="row" id="iconsCont">
 
-					<div class="cards col-md col-sm-12" id="c1">
-						<p class="weather text-center" id="day1"></p>
-						<div class="img text-center"><img src="sunPH.png" class="imgClass" id="img1" alt=""
-								width="75px">
-						</div>
-						<div class="min-max text-center">
-							<div>
-								<p class="minVal" id="day1min">minimum</p>
-							</div>
-							<div>
-								<p class="maxVal" id="day1max">maximum</p>
-							</div>
-						</div>
+
+			<div class="card col-10 col-sm-8 col-md-2 " id="c1">
+				<p class="weather text-center" id="day1"></p>
+				<div class="img text-center"><img src="sunPH.png" class="imgClass" id="img1" alt="" width="75px">
+				</div>
+				<div class="min-max text-center">
+					<div>
+						<p class="minVal" id="day1min">minimum</p>
 					</div>
-
-					<div class="cards col-md col-sm-12">
-						<p class="weather text-center" id="day2"></p>
-						<div class="img text-center"><img src="sunPH.png" class="imgClass" id="img2" alt=""
-								width="75px">
-						</div>
-						<div class="min-max text-center">
-							<div>
-								<p class="minVal" id="day2min">minimum</p>
-							</div>
-							<div>
-								<p class="maxVal" id="day2max">maximum</p>
-							</div>
-						</div>
+					<div>
+						<p class="maxVal" id="day1max">maximum</p>
 					</div>
+				</div>
+			</div>
 
-					<div class="cards col-md col-sm-12">
-						<p class="weather text-center" id="day3"></p>
-						<div class="img text-center"><img src="sunPH.png" class="imgClass" id="img3" alt=""
-								width="75px">
-						</div>
-						<div class="min-max text-center">
-							<div>
-								<p class="minVal" id="day3min">minimum</p>
-							</div>
-							<div>
-								<p class="maxVal" id="day3max">maximum</p>
-							</div>
-						</div>
+			<div class="card col-10 col-sm-8 col-md-2 ">
+				<p class="weather text-center" id="day2"></p>
+				<div class="img text-center"><img src="sunPH.png" class="imgClass" id="img2" alt="" width="75px">
+				</div>
+				<div class="min-max text-center">
+					<div>
+						<p class="minVal" id="day2min">minimum</p>
 					</div>
-
-					<div class="cards col-md col-sm-12">
-						<p class="weather text-center" id="day4"></p>
-						<div class="img text-center"><img src="sunPH.png" class="imgClass" id="img4" alt=""
-								width="75px">
-						</div>
-						<div class="min-max text-center">
-							<div>
-								<p class="minVal" id="day4min">minimum</p>
-							</div>
-							<div>
-								<p class="maxVal" id="day4max">maximum</p>
-							</div>
-						</div>
+					<div>
+						<p class="maxVal" id="day2max">maximum</p>
 					</div>
+				</div>
+			</div>
 
-					<div class="cards col-md col-sm-12">
-						<p class="weather text-center" id="day5"></p>
-						<div class="img text-center"><img src="sunPH.png" class="imgClass" id="img5" alt=""
-								width="75px">
-						</div>
-						<div class="min-max text-center">
-							<div>
-								<p class="minVal" id="day5min">minimum</p>
-							</div>
-							<div>
-								<p class="maxVal" id="day5max">maximum</p>
-							</div>
-						</div>
+			<div class="card col-10 col-sm-8 col-md-2 ">
+				<p class="weather text-center" id="day3"></p>
+				<div class="img text-center"><img src="sunPH.png" class="imgClass" id="img3" alt="" width="75px">
+				</div>
+				<div class="min-max text-center">
+					<div>
+						<p class="minVal" id="day3min">minimum</p>
 					</div>
+					<div>
+						<p class="maxVal" id="day3max">maximum</p>
+					</div>
+				</div>
+			</div>
 
+			<div class="card col-10 col-sm-8 col-md-2 ">
+				<p class="weather text-center" id="day4"></p>
+				<div class="img text-center"><img src="sunPH.png" class="imgClass" id="img4" alt="" width="75px">
+				</div>
+				<div class="min-max text-center">
+					<div>
+						<p class="minVal" id="day4min">minimum</p>
+					</div>
+					<div>
+						<p class="maxVal" id="day4max">maximum</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="card col-10 col-sm-8 col-md-2 ">
+				<p class="weather text-center" id="day5"></p>
+				<div class="img text-center"><img src="sunPH.png" class="imgClass" id="img5" alt="" width="75px">
+				</div>
+				<div class="min-max text-center">
+					<div>
+						<p class="minVal" id="day5min">minimum</p>
+					</div>
+					<div>
+						<p class="maxVal" id="day5max">maximum</p>
+					</div>
 				</div>
 			</div>
 
 		</div>
-	</div>
+	</section> -->
 
 
 
@@ -154,180 +178,266 @@
 
 
 
+	<section>
 
 
-	<div class="headrow row">
+
+		<div class="headrow row">
 
 
-		<div class="col-md-6">
-			<h1 class="headtitle">gifstagram</h1>
+			<div class="titlediv col-md-6">
+				<h1 class="headtitle">gifsta</h1>
+			</div>
+
+
+			<div class="searchdiv col-md-6">
+				<form class="form">
+					<input placeholder="SEARCH ANY TOPIC" class="search" id="search" type="search" />
+					<button class="btnsearch" id="btnSearch"><i class="fa fa-search"></i></button>
+				</form>
+			</div>
+
+
 		</div>
 
 
-		<div class="searchdiv col-md-6">
-			<form class="form">
-				<input placeholder="SEARCH ANY TOPIC" id="search" type="search" />
-				<button id="btnSearch"><i class="fa fa-search"></i></button>
-			</form>
-		</div>
-
-
-	</div>
 
 
 
 
 
-	<div class="results">
 
+		<div class="row d-flex justify-content-center results">
 
-
-		<div class="row d-flex justify-content-center">
-
-			<div class="card col-10 col-sm-8 col-md-3 ">
+			<div class="card col-10 col-sm-8 col-md-2 ">
 				<img class="image" id="gif1" src="" alt="">
 				<h2 class="caption" id="caption1"></h2>
 			</div>
 
-			<div class="card col-10 col-sm-8 col-md-3 ">
+			<div class="card col-10 col-sm-8 col-md-2 ">
 				<img class="image" id="gif2" src="" alt="">
 				<h2 class="caption" id="caption2"></h2>
 			</div>
 
-			<div class="card col-10 col-sm-8 col-md-3 ">
+			<div class="card col-10 col-sm-8 col-md-2 ">
 				<img class="image" id="gif3" src="" alt="">
 				<h2 class="caption" id="caption3"></h2>
 			</div>
 
-			<div class="card col-10 col-sm-8 col-md-3 ">
+			<div class="card col-10 col-sm-8 col-md-2 ">
 				<img class="image" id="gif4" src="" alt="">
 				<h2 class="caption" id="caption4"></h2>
 			</div>
 
-			<div class="card col-10 col-sm-8 col-md-3 ">
+			<div class="card col-10 col-sm-8 col-md-2 ">
 				<img class="image" id="gif5" src="" alt="">
 				<h2 class="caption" id="caption5"></h2>
 			</div>
 
-			<div class="card col-10 col-sm-8 col-md-3 ">
+			<div class="card col-10 col-sm-8 col-md-2 ">
 				<img class="image" id="gif6" src="" alt="">
 				<h2 class="caption" id="caption6"></h2>
 			</div>
 
-			<div class="card col-10 col-sm-8 col-md-3 ">
+			<div class="card col-10 col-sm-8 col-md-2 ">
 				<img class="image" id="gif7" src="" alt="">
 				<h2 class="caption" id="caption7"></h2>
 			</div>
 
-			<div class="card col-10 col-sm-8 col-md-3 ">
+			<div class="card col-10 col-sm-8 col-md-2 ">
 				<img class="image" id="gif8" src="" alt="">
 				<h2 class="caption" id="caption8"></h2>
 			</div>
 
-			<div class="card col-10 col-sm-8 col-md-3 ">
+			<div class="card col-10 col-sm-8 col-md-2 ">
 				<img class="image" id="gif9" src="" alt="">
 				<h2 class="caption" id="caption9"></h2>
 			</div>
 
+			<div class="card col-10 col-sm-8 col-md-2 ">
+				<img class="image" id="gif10" src="" alt="">
+				<h2 class="caption" id="caption10"></h2>
+			</div>
+
+			<div class="card col-10 col-sm-8 col-md-2 ">
+				<img class="image" id="gif11" src="" alt="">
+				<h2 class="caption" id="caption11"></h2>
+			</div>
+
+			<div class="card col-10 col-sm-8 col-md-2 ">
+				<img class="image" id="gif12" src="" alt="">
+				<h2 class="caption" id="caption12"></h2>
+			</div>
+
+			<div class="card col-10 col-sm-8 col-md-2 ">
+				<img class="image" id="gif13" src="" alt="">
+				<h2 class="caption" id="caption13"></h2>
+			</div>
+
+			<div class="card col-10 col-sm-8 col-md-2 ">
+				<img class="image" id="gif14" src="" alt="">
+				<h2 class="caption" id="caption14"></h2>
+			</div>
+
+			<div class="card col-10 col-sm-8 col-md-2 ">
+				<img class="image" id="gif15" src="" alt="">
+				<h2 class="caption" id="caption15"></h2>
+			</div>
+
+		</div>
+
+	</section>
+
+
+
+
+
+
+
+
+
+
+
+	<section>
+
+		<div class="headrow row">
+
+
+			<div class="titlediv col-md-6">
+				<h1 class="headtitle">IMGsta</h1>
+			</div>
+
+
+			<div class="searchdiv col-md-6">
+				<form class="form">
+					<input placeholder="SEARCH ANY TOPIC" class="search" id="searchunsp" type="search" />
+					<button class="btnsearch" id="btnSearchunsp"><i class="fa fa-search"></i></button>
+				</form>
+			</div>
+
+
 		</div>
 
 
 
-	</div>
+
+		<div class="row d-flex justify-content-center results">
+
+
+			<div class="card col-10 col-sm-8 col-md-2 ">
+				<img class="image" id="unspimg1" src="" alt="">
+				<h2 class="caption" id="unspimgcaption1"></h2>
+			</div>
+
+			<div class="card col-10 col-sm-8 col-md-2 ">
+				<img class="image" id="unspimg2" src="" alt="">
+				<h2 class="caption" id="unspimgcaption2"></h2>
+			</div>
+
+			<div class="card col-10 col-sm-8 col-md-2 ">
+				<img class="image" id="unspimg3" src="" alt="">
+				<h2 class="caption" id="unspimgcaption3"></h2>
+			</div>
+
+			<div class="card col-10 col-sm-8 col-md-2 ">
+				<img class="image" id="unspimg4" src="" alt="">
+				<h2 class="caption" id="unspimgcaption4"></h2>
+			</div>
+
+			<div class="card col-10 col-sm-8 col-md-2 ">
+				<img class="image" id="unspimg5" src="" alt="">
+				<h2 class="caption" id="unspimgcaption5"></h2>
+			</div>
+
+			<div class="card col-10 col-sm-8 col-md-2 ">
+				<img class="image" id="unspimg6" src="" alt="">
+				<h2 class="caption" id="unspimgcaption6"></h2>
+			</div>
+
+			<div class="card col-10 col-sm-8 col-md-2 ">
+				<img class="image" id="unspimg7" src="" alt="">
+				<h2 class="caption" id="unspimgcaption7"></h2>
+			</div>
+
+			<div class="card col-10 col-sm-8 col-md-2 ">
+				<img class="image" id="unspimg8" src="" alt="">
+				<h2 class="caption" id="unspimgcaption8"></h2>
+			</div>
+
+			<div class="card col-10 col-sm-8 col-md-2 ">
+				<img class="image" id="unspimg9" src="" alt="">
+				<h2 class="caption" id="unspimgcaption9"></h2>
+			</div>
+
+			<div class="card col-10 col-sm-8 col-md-2 ">
+				<img class="image" id="unspimg10" src="" alt="">
+				<h2 class="caption" id="unspimgcaption10"></h2>
+			</div>
+
+			<div class="card col-10 col-sm-8 col-md-2 ">
+				<img class="image" id="unspimg11" src="" alt="">
+				<h2 class="caption" id="unspimgcaption11"></h2>
+			</div>
+
+			<div class="card col-10 col-sm-8 col-md-2 ">
+				<img class="image" id="unspimg12" src="" alt="">
+				<h2 class="caption" id="unspimgcaption12"></h2>
+			</div>
+
+			<div class="card col-10 col-sm-8 col-md-2 ">
+				<img class="image" id="unspimg13" src="" alt="">
+				<h2 class="caption" id="unspimgcaption13"></h2>
+			</div>
+
+			<div class="card col-10 col-sm-8 col-md-2 ">
+				<img class="image" id="unspimg14" src="" alt="">
+				<h2 class="caption" id="unspimgcaption14"></h2>
+			</div>
+
+			<div class="card col-10 col-sm-8 col-md-2 ">
+				<img class="image" id="unspimg15" src="" alt="">
+				<h2 class="caption" id="unspimgcaption15"></h2>
+			</div>
+
+		</div>
+
+	</section>
 
 
 
 
 
+	<section>
 
 
+		<div class="headrow row">
 
 
-
-	<div class="row d-flex justify-content-center">
-		<h1 class="col-12 d-flex justify-content-center">Fetching Single Image via the Unsplash API</h1>
-
-		<div class="searchdiv col-12 d-flex justify-content-center">
-			<form class="form">
+			<div class="titlediv col-md-6">
+				<h1 class="headtitle">Mealmeal</h1>
+			</div>
 
 
-				<input placeholder="SEARCH ANY TOPIC" id="searchunsp" type="search" />
+			<div class="searchdiv col-md-6">
+				<form class="form">
+					<button class="search" id="get_meal">Get Meal 🍔</button>
+				</form>
+			</div>
 
 
-
-				<button id="btnSearchunsp"><i class="fa fa-search"></i></button>
-
-
-			</form>
 		</div>
 
 
 
 
-
-
-		<div class="imagespl col-10 col-sm-8 col-md-3 ">
-			<img class="unspimage" id="unspimg1" src="" alt="">
-			<h2 class="unspcaption" id="unspimgcaption1"></h2>
-		</div>
-
-		<div class="imagespl col-10 col-sm-8 col-md-3 ">
-			<img class="unspimage" id="unspimg2" src="" alt="">
-			<h2 class="unspcaption" id="unspimgcaption2"></h2>
-		</div>
-
-		<div class="imagespl col-10 col-sm-8 col-md-3 ">
-			<img class="unspimage" id="unspimg3" src="" alt="">
-			<h2 class="unspcaption" id="unspimgcaption3"></h2>
-		</div>
-
-		<div class="imagespl col-10 col-sm-8 col-md-3 ">
-			<img class="unspimage" id="unspimg4" src="" alt="">
-			<h2 class="unspcaption" id="unspimgcaption4"></h2>
-		</div>
-
-		<div class="imagespl col-10 col-sm-8 col-md-3 ">
-			<img class="unspimage" id="unspimg5" src="" alt="">
-			<h2 class="unspcaption" id="unspimgcaption5"></h2>
-		</div>
-
-		<div class="imagespl col-10 col-sm-8 col-md-3 ">
-			<img class="unspimage" id="unspimg6" src="" alt="">
-			<h2 class="unspcaption" id="unspimgcaption6"></h2>
-		</div>
-
-		<div class="imagespl col-10 col-sm-8 col-md-3 ">
-			<img class="unspimage" id="unspimg7" src="" alt="">
-			<h2 class="unspcaption" id="unspimgcaption7"></h2>
-		</div>
-
-		<div class="imagespl col-10 col-sm-8 col-md-3 ">
-			<img class="unspimage" id="unspimg8" src="" alt="">
-			<h2 class="unspcaption" id="unspimgcaption8"></h2>
-		</div>
-
-		<div class="imagespl col-10 col-sm-8 col-md-3 ">
-			<img class="unspimage" id="unspimg9" src="" alt="">
-			<h2 class="unspcaption" id="unspimgcaption9"></h2>
-		</div>
-
-	</div>
-
-
-
-
-
-	<div class="container">
-		
-		
-		<div class="row text-center">
+		<!-- <div class="row text-center">
 			<h3>
 				Feeling hungry?
 			</h3>
 			<h5>Get a random meal by clicking below</h5>
 			<button class="button-primary" id="get_meal">Get Meal 🍔</button>
 
-		</div>
+		</div> -->
 
 
 		<div id="meal" class=" meal">
@@ -340,9 +450,9 @@
 
 		<div id="meals" class="row meal">
 		</div>
-	
-	
-	</div>
+
+
+	</section>
 
 
 

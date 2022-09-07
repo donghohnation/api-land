@@ -1,1 +1,1 @@
-https://donghohnation.github.io/QUOQUO/
+https://donghohnation.github.io/api-land/

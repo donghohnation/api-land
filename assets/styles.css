@@ -3,15 +3,40 @@
 	/* background-color: rgb(251, 251, 251); */
 }
 
-section {
-	/* background-color: aquamarine;
-	border: 1px solid black; */
+.section {
+	/* background-color: aquamarine; */
+	border: 2px solid black;
+	border-radius: 22px;
+	margin: 22px 110px;
+	-webkit-border-radius: 22px;
+	-moz-border-radius: 22px;
+	-ms-border-radius: 22px;
+	-o-border-radius: 22px;
 }
 
-.headrow {
-	/* background-color: rgb(168, 168, 227); */
-	margin: 50px 0px;
+.quoteadvicediv {
+	margin: 22px 0px;
 }
+
+.quotediv,
+.adviceediv {
+	border: 2px solid black;
+	border-radius: 22px;
+	margin: 22px 12px;
+}
+
+
+.headrow1,
+.headrow {
+	background-color: rgb(0, 0, 0);
+	padding: 10px 20px;
+	border-radius: 20px 20px 0px 0px;
+	-webkit-border-radius: 20px 20px 0px 0px;
+	-moz-border-radius: 20px 20px 0px 0px;
+	-ms-border-radius: 20px 20px 0px 0px;
+	-o-border-radius: 20px 20px 0px 0px;
+}
+
 
 .titlediv {
 	/* background-color: orange; */
@@ -19,40 +44,78 @@ section {
 
 .headtitle {
 	font-weight: 700;
-	font-size: 133px;
-	padding-left: 88px;
+	font-size: 32px;
+	color: white;
+	/* background-color: orange; */
 }
 
 .searchdiv {
 	margin: auto;
 	text-align: right;
-	padding-right: 88px;
 	/* background-color: rgb(209, 183, 134); */
 }
+
+.textresultdiv {
+	margin: 32px 0px;
+	border: 2px solid black;
+	padding: 15px 22px;
+	border-radius: 12px;
+	-webkit-border-radius: 12px;
+	-moz-border-radius: 12px;
+	-ms-border-radius: 12px;
+	-o-border-radius: 12px;
+}
+
+.textresult {
+	font-weight: 800;
+	font-size: 32px;
+	line-height: 34px;
+}
+
+#author {
+	font-size: 28px;
+	font-weight: 400;
+}
+
+
+.button {
+	font-size: 18px;
+	height: 45px;
+	font-weight: 700;
+	padding: 0px 15px;
+	border: 1px solid rgb(0, 0, 0);
+	background-color: rgb(255, 255, 255);
+	color: rgb(0, 0, 0);
+	border-radius: 4px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	-ms-border-radius: 4px;
+	-o-border-radius: 4px;
+}
+
 
 
 .search {
 	margin-right: 8px;
-	height: 55px;
-	width: 47%;
+	height: 45px;
 	font-size: 18px;
 	font-weight: 400;
-	padding: 12px;
+	padding: 0px 15px;
 	border: 1px solid rgb(0, 0, 0);
-	background-color: black;
-	color: white;
+	background-color: rgb(255, 255, 255);
+	color: rgb(0, 0, 0);
 	border-radius: 2px;
 
 }
 
 .btnsearch {
-	height: 55px;
-	width: 55px;
+	height: 45px;
+	width: 45px;
 	font-size: 18px;
 	border-radius: 2px;
 	border: 1px solid rgb(0, 0, 0);
-	background-color: black;
-	color: white;
+	background-color: rgb(255, 255, 255);
+	color: rgb(0, 0, 0);
 	-webkit-border-radius: 2px;
 	-moz-border-radius: 2px;
 	-ms-border-radius: 2px;
@@ -60,18 +123,12 @@ section {
 }
 
 .results {
-	margin: 0px 112px;
-	margin-bottom: 133px;
+	margin: 0px 32px;
+	margin-bottom: 33px;
 	margin-top: 37px;
 	/* background-color: aqua; */
 }
 
-.resultsmeal {
-	margin: 0px 112px;
-	margin-bottom: 133px;
-	margin-top: 37px;
-	/* background-color: rgb(187, 212, 143); */
-}
 
 
 .card {
@@ -79,7 +136,7 @@ section {
 	background-color: rgba(255, 0, 0, 0);
 	margin: 8px;
 	padding: 11px;
-	border: 1.5px solid black;
+	border: 2px solid black;
 	border-radius: 3px;
 	-webkit-border-radius: 3px;
 	-moz-border-radius: 3px;
@@ -191,17 +248,51 @@ section {
 
 
 
+.resultsmeal {
+	margin: 32px 112px;
+	
+	/* background-color: rgb(187, 212, 143); */
+}
 
-
-
-
-
+.mealdiv {
+	border: 2px solid black;
+	padding: 15px 22px;
+	border-radius: 12px;
+}
 
 .mealtitle {
-	font-size: 66px;
-	font-weight: 700;
+	font-weight: 800;
+	font-size: 32px;
+	text-transform: capitalize;
 }
 
 .mealimg {
+	margin: 22px 0px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 2px;
+	object-fit: cover;
+	object-position: center center;
 	width: 100%;
+	/* height: 100%; */
+	aspect-ratio: 3/1.5;
+}
+
+.mealtextdiv{
+	margin: 0px 0px;
+}
+
+.mealtext{
+	font-size: 14px;
+	line-height: 18px;
+}
+
+.mealinstructionstext{
+	font-size: 16px;
+	line-height: 20px;
+}
+
+.mealvideodiv{
+	margin: 22px 0px;
 }

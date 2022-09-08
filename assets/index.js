@@ -1,8 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
 	// DOM elements
-	const button = document.querySelector("button");
-	const quote = document.querySelector("blockquote p");
-	const cite = document.querySelector("blockquote cite");
+	const button = document.getElementById("quotebtn");
+	const quote = document.getElementById("quote");
+	const cite = document.getElementById("author");
 
 	async function updateQuote() {
 		// Fetch a random quote from the Quotable API
@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		if (response.ok) {
 			// Update DOM elements
 			quote.textContent = data.content;
-			cite.textContent = data.author;
+			cite.textContent = "- " + data.author;
 		} else {
 			quote.textContent = "An error occured";
 			console.log(data);
@@ -34,9 +34,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-const quote = document.querySelector("#quote");
-const author = document.querySelector("#author");
-const btn = document.querySelector("#btn");
 
 
 
@@ -46,19 +43,7 @@ const btnAdvice = document.querySelector("#btnAdvice");
 
 
 
-window.onload = getQuote(); getAdvice();
-
-btn.addEventListener("click", getQuote);
-
-function getQuote() {
-	fetch("http://quotable.io/random")
-		.then(res => res.json())
-		.then(data => {
-			quote.innerHTML = `"${data.content}"`;
-			author.innerHTML = `-${data.author}`;
-		})
-}
-
+window.onload = getAdvice();
 
 
 btnAdvice.addEventListener("click", getAdvice);
@@ -287,34 +272,40 @@ const createMeal = (meal) => {
     <div class="row d-flex justify-content-center resultsmeal">
 
 
-	 <div class="col-5">
+	 <div class="col-9 mealdiv">
 
 
       	<h4 class="mealtitle">${meal.strMeal}</h4>
 
         <img class="mealimg" src="${meal.strMealThumb}" alt="Meal Image">
+<div class="row mealtextdiv"> 
+	<div class="col-12 col-lg-4">
+        ${meal.strCategory ? `<p class="mealtext"><strong>Category:</strong> ${meal.strCategory}</p>` : ''}
 
-        ${meal.strCategory ? `<p><strong>Category:</strong> ${meal.strCategory}</p>` : ''}
+        ${meal.strArea ? `<p class="mealtext"><strong>Area:</strong> ${meal.strArea}</p>` : ''}
 
-        ${meal.strArea ? `<p><strong>Area:</strong> ${meal.strArea}</p>` : ''}
+        ${meal.strTags ? `<p class="mealtext"><strong>Tags:</strong> ${meal.strTags.split(',').join(', ')}</p>` : ''}
 
-        ${meal.strTags ? `<p><strong>Tags:</strong> ${meal.strTags.split(',').join(', ')}</p>` : ''}
-
-        <h5>Ingredients:</h5>
+        <h5 class="mealtext"><strong>Ingredients:</strong></h5>
         <ul>
-          ${ingredients.map(ingredient => `<li>${ingredient}</li>`).join('')}
+          ${ingredients.map(ingredient => `<li class="mealtext">${ingredient}</li>`).join('')}
         </ul>
-        
-        <p>${meal.strInstructions}</p>
+   </div>     
+   <div class="col-12 col-lg-8">
+   <h5 class="mealinstructionstext"><strong>Instructions:</strong></h5>
+        <p class="mealinstructionstext">${meal.strInstructions}</p>
+	</div>
+	</div>
 
+
+	<div class="mealvideodiv">
     	${meal.strYoutube ? `
-     	 <h5>Video Recipe</h5>
+     	 <h5 class=""><strong>Video Recipe:</strong></h5>
      	 <div class="videoWrapper">
         <iframe width="100%" height="315"
         src="https://www.youtube.com/embed/${meal.strYoutube.slice(-11)}"></iframe>
 
-
-      </div>
+</div>
 
 
 	</div>` : ''}
@@ -323,11 +314,4 @@ const createMeal = (meal) => {
 	meal_container.innerHTML = newInnerHTML;
 }
 
-// const createMeal = (meal) => {
-// 	document.querySelector("#foodtitle").innerHTML = meal.strMeal;
-// 	document.querySelector("#foodcategory").innerHTML = "Category: " + meal.strCategory;
-// 	document.querySelector("#foodcountry").innerHTML = "Country: " + meal.strArea;
-// 	document.querySelector("#foodingredients").innerHTML = meal.strIngredient1 + meal.strIngredient2 + meal.strIngredient3
 
-
-// }

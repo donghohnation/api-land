@@ -10,7 +10,7 @@
 	<link rel="stylesheet" href="./assets/styles.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&display=swap" rel="stylesheet">
-	<title>QUO QUO</title>
+	<title>API LAND</title>
 </head>
 
 
@@ -18,46 +18,79 @@
 <body>
 
 
-<div class="card">
-	<div class="card-body">
-		<blockquote class="blockquote mb-0">
-			<p>loading...</p>
-			<footer class="blockquote-footer">
-				<cite title="Source Title"></cite>
-			</footer>
-		</blockquote>
-	</div>
-	<div class="card-footer">
-		<button class="btn btn-primary">New Quote
-	</div>
-</div>
-</div>
 
 
 
 
 
-	<section>
-		<div class="container">
-			<div class="quote-box">
-				<p id="quote"></p>
-				<small id="author"></small>
+	<div class="row d-flex justify-content-center quoteadvicediv">
+
+
+
+
+		<div class="col-12 col-lg-5 quotediv">
+
+
+			<div class="headrow1 row">
+
+				<div class="titlediv col-md-6">
+					<h1 class="headtitle">quoquo</h1>
+				</div>
+
+				<div class="searchdiv col-md-6">
+					<button class="button" id="quotebtn">click for new quote</button>
+				</div>
+
 			</div>
-			<button id="btn">new quote</button>
-		</div>
-	</section>
 
 
+			<div class="row d-flex justify-content-center ">
 
+				<div class="col-10  textresultdiv">
+					<p class="textresult" id="quote"></p>
+					<em>
+						<p id="author"></p>
+					</em>
+				</div>
 
-	<section>
-		<div class="container">
-			<div class="advice-box">
-				<p id="advice"></p>
 			</div>
-			<button id="btnAdvice">new advice</button>
+
+
 		</div>
-	</section>
+
+
+
+
+		<div class="col-12 col-lg-5 adviceediv">
+
+
+			<div class="headrow1 row">
+
+				<div class="titlediv col-md-6">
+					<h1 class="headtitle">advicer</h1>
+				</div>
+
+				<div class="searchdiv col-md-6">
+					<button class="button" id="btnAdvice">click for new advice</button>
+				</div>
+
+			</div>
+
+
+			<div class="row d-flex justify-content-center  ">
+
+				<div class="col-10  textresultdiv">
+					<p class="textresult" id="advice"></p>
+				</div>
+
+			</div>
+
+		</div>
+
+
+
+
+	</div>
 
 
 
@@ -177,240 +210,246 @@
 
 
 
-
-	<section>
-
+	<div class="row section">
 
 
-		<div class="headrow row">
+		<div class="col-12">
 
 
-			<div class="titlediv col-md-6">
-				<h1 class="headtitle">gifsta</h1>
+
+			<div class="headrow row">
+
+
+				<div class="titlediv col-md-6">
+					<h1 class="headtitle">gifsta</h1>
+				</div>
+
+
+				<div class="searchdiv col-md-6">
+					<form class="form">
+						<input placeholder="SEARCH ANY TOPIC" class="search" id="search" type="search" />
+						<button class="btnsearch" id="btnSearch"><i class="fa fa-search"></i></button>
+					</form>
+				</div>
+
+
 			</div>
 
 
-			<div class="searchdiv col-md-6">
-				<form class="form">
-					<input placeholder="SEARCH ANY TOPIC" class="search" id="search" type="search" />
-					<button class="btnsearch" id="btnSearch"><i class="fa fa-search"></i></button>
-				</form>
-			</div>
 
 
-		</div>
 
 
 
 
+			<div class="row d-flex justify-content-center results">
 
+				<div class="card col-10 col-sm-8 col-md-2 ">
+					<img class="image" id="gif1" src="" alt="">
+					<h2 class="caption" id="caption1"></h2>
+				</div>
 
+				<div class="card col-10 col-sm-8 col-md-2 ">
+					<img class="image" id="gif2" src="" alt="">
+					<h2 class="caption" id="caption2"></h2>
+				</div>
 
+				<div class="card col-10 col-sm-8 col-md-2 ">
+					<img class="image" id="gif3" src="" alt="">
+					<h2 class="caption" id="caption3"></h2>
+				</div>
 
-		<div class="row d-flex justify-content-center results">
+				<div class="card col-10 col-sm-8 col-md-2 ">
+					<img class="image" id="gif4" src="" alt="">
+					<h2 class="caption" id="caption4"></h2>
+				</div>
 
-			<div class="card col-10 col-sm-8 col-md-2 ">
-				<img class="image" id="gif1" src="" alt="">
-				<h2 class="caption" id="caption1"></h2>
-			</div>
+				<div class="card col-10 col-sm-8 col-md-2 ">
+					<img class="image" id="gif5" src="" alt="">
+					<h2 class="caption" id="caption5"></h2>
+				</div>
 
-			<div class="card col-10 col-sm-8 col-md-2 ">
-				<img class="image" id="gif2" src="" alt="">
-				<h2 class="caption" id="caption2"></h2>
-			</div>
+				<div class="card col-10 col-sm-8 col-md-2 ">
+					<img class="image" id="gif6" src="" alt="">
+					<h2 class="caption" id="caption6"></h2>
+				</div>
 
-			<div class="card col-10 col-sm-8 col-md-2 ">
-				<img class="image" id="gif3" src="" alt="">
-				<h2 class="caption" id="caption3"></h2>
-			</div>
+				<div class="card col-10 col-sm-8 col-md-2 ">
+					<img class="image" id="gif7" src="" alt="">
+					<h2 class="caption" id="caption7"></h2>
+				</div>
 
-			<div class="card col-10 col-sm-8 col-md-2 ">
-				<img class="image" id="gif4" src="" alt="">
-				<h2 class="caption" id="caption4"></h2>
-			</div>
+				<div class="card col-10 col-sm-8 col-md-2 ">
+					<img class="image" id="gif8" src="" alt="">
+					<h2 class="caption" id="caption8"></h2>
+				</div>
 
-			<div class="card col-10 col-sm-8 col-md-2 ">
-				<img class="image" id="gif5" src="" alt="">
-				<h2 class="caption" id="caption5"></h2>
-			</div>
+				<div class="card col-10 col-sm-8 col-md-2 ">
+					<img class="image" id="gif9" src="" alt="">
+					<h2 class="caption" id="caption9"></h2>
+				</div>
 
-			<div class="card col-10 col-sm-8 col-md-2 ">
-				<img class="image" id="gif6" src="" alt="">
-				<h2 class="caption" id="caption6"></h2>
-			</div>
+				<div class="card col-10 col-sm-8 col-md-2 ">
+					<img class="image" id="gif10" src="" alt="">
+					<h2 class="caption" id="caption10"></h2>
+				</div>
 
-			<div class="card col-10 col-sm-8 col-md-2 ">
-				<img class="image" id="gif7" src="" alt="">
-				<h2 class="caption" id="caption7"></h2>
-			</div>
+				<div class="card col-10 col-sm-8 col-md-2 ">
+					<img class="image" id="gif11" src="" alt="">
+					<h2 class="caption" id="caption11"></h2>
+				</div>
 
-			<div class="card col-10 col-sm-8 col-md-2 ">
-				<img class="image" id="gif8" src="" alt="">
-				<h2 class="caption" id="caption8"></h2>
-			</div>
+				<div class="card col-10 col-sm-8 col-md-2 ">
+					<img class="image" id="gif12" src="" alt="">
+					<h2 class="caption" id="caption12"></h2>
+				</div>
 
-			<div class="card col-10 col-sm-8 col-md-2 ">
-				<img class="image" id="gif9" src="" alt="">
-				<h2 class="caption" id="caption9"></h2>
-			</div>
+				<div class="card col-10 col-sm-8 col-md-2 ">
+					<img class="image" id="gif13" src="" alt="">
+					<h2 class="caption" id="caption13"></h2>
+				</div>
 
-			<div class="card col-10 col-sm-8 col-md-2 ">
-				<img class="image" id="gif10" src="" alt="">
-				<h2 class="caption" id="caption10"></h2>
-			</div>
+				<div class="card col-10 col-sm-8 col-md-2 ">
+					<img class="image" id="gif14" src="" alt="">
+					<h2 class="caption" id="caption14"></h2>
+				</div>
 
-			<div class="card col-10 col-sm-8 col-md-2 ">
-				<img class="image" id="gif11" src="" alt="">
-				<h2 class="caption" id="caption11"></h2>
-			</div>
+				<div class="card col-10 col-sm-8 col-md-2 ">
+					<img class="image" id="gif15" src="" alt="">
+					<h2 class="caption" id="caption15"></h2>
+				</div>
 
-			<div class="card col-10 col-sm-8 col-md-2 ">
-				<img class="image" id="gif12" src="" alt="">
-				<h2 class="caption" id="caption12"></h2>
-			</div>
-
-			<div class="card col-10 col-sm-8 col-md-2 ">
-				<img class="image" id="gif13" src="" alt="">
-				<h2 class="caption" id="caption13"></h2>
-			</div>
-
-			<div class="card col-10 col-sm-8 col-md-2 ">
-				<img class="image" id="gif14" src="" alt="">
-				<h2 class="caption" id="caption14"></h2>
-			</div>
-
-			<div class="card col-10 col-sm-8 col-md-2 ">
-				<img class="image" id="gif15" src="" alt="">
-				<h2 class="caption" id="caption15"></h2>
-			</div>
-
-		</div>
-
-	</section>
-
-
-
-
-
-
-
-
-
-
-
-	<section>
-
-		<div class="headrow row">
-
-
-			<div class="titlediv col-md-6">
-				<h1 class="headtitle">IMGsta</h1>
-			</div>
-
-
-			<div class="searchdiv col-md-6">
-				<form class="form">
-					<input placeholder="SEARCH ANY TOPIC" class="search" id="searchunsp" type="search" />
-					<button class="btnsearch" id="btnSearchunsp"><i class="fa fa-search"></i></button>
-				</form>
-			</div>
-
-
-		</div>
-
-
-
-
-		<div class="row d-flex justify-content-center results">
-
-
-			<div class="card col-10 col-sm-8 col-md-2 ">
-				<img class="image" id="unspimg1" src="" alt="">
-				<h2 class="caption" id="unspimgcaption1"></h2>
-			</div>
-
-			<div class="card col-10 col-sm-8 col-md-2 ">
-				<img class="image" id="unspimg2" src="" alt="">
-				<h2 class="caption" id="unspimgcaption2"></h2>
-			</div>
-
-			<div class="card col-10 col-sm-8 col-md-2 ">
-				<img class="image" id="unspimg3" src="" alt="">
-				<h2 class="caption" id="unspimgcaption3"></h2>
-			</div>
-
-			<div class="card col-10 col-sm-8 col-md-2 ">
-				<img class="image" id="unspimg4" src="" alt="">
-				<h2 class="caption" id="unspimgcaption4"></h2>
-			</div>
-
-			<div class="card col-10 col-sm-8 col-md-2 ">
-				<img class="image" id="unspimg5" src="" alt="">
-				<h2 class="caption" id="unspimgcaption5"></h2>
-			</div>
-
-			<div class="card col-10 col-sm-8 col-md-2 ">
-				<img class="image" id="unspimg6" src="" alt="">
-				<h2 class="caption" id="unspimgcaption6"></h2>
-			</div>
-
-			<div class="card col-10 col-sm-8 col-md-2 ">
-				<img class="image" id="unspimg7" src="" alt="">
-				<h2 class="caption" id="unspimgcaption7"></h2>
-			</div>
-
-			<div class="card col-10 col-sm-8 col-md-2 ">
-				<img class="image" id="unspimg8" src="" alt="">
-				<h2 class="caption" id="unspimgcaption8"></h2>
-			</div>
-
-			<div class="card col-10 col-sm-8 col-md-2 ">
-				<img class="image" id="unspimg9" src="" alt="">
-				<h2 class="caption" id="unspimgcaption9"></h2>
-			</div>
-
-			<div class="card col-10 col-sm-8 col-md-2 ">
-				<img class="image" id="unspimg10" src="" alt="">
-				<h2 class="caption" id="unspimgcaption10"></h2>
-			</div>
-
-			<div class="card col-10 col-sm-8 col-md-2 ">
-				<img class="image" id="unspimg11" src="" alt="">
-				<h2 class="caption" id="unspimgcaption11"></h2>
-			</div>
-
-			<div class="card col-10 col-sm-8 col-md-2 ">
-				<img class="image" id="unspimg12" src="" alt="">
-				<h2 class="caption" id="unspimgcaption12"></h2>
-			</div>
-
-			<div class="card col-10 col-sm-8 col-md-2 ">
-				<img class="image" id="unspimg13" src="" alt="">
-				<h2 class="caption" id="unspimgcaption13"></h2>
-			</div>
-
-			<div class="card col-10 col-sm-8 col-md-2 ">
-				<img class="image" id="unspimg14" src="" alt="">
-				<h2 class="caption" id="unspimgcaption14"></h2>
-			</div>
-
-			<div class="card col-10 col-sm-8 col-md-2 ">
-				<img class="image" id="unspimg15" src="" alt="">
-				<h2 class="caption" id="unspimgcaption15"></h2>
 			</div>
 
 		</div>
-
-	</section>
-
+	</div>
 
 
 
 
-	<section>
 
 
-		<div class="headrow row">
+
+
+
+
+
+	<div class="section row">
+		<div class="col-12">
+			<div class="headrow row">
+
+
+				<div class="titlediv col-md-6">
+					<h1 class="headtitle">IMGsta</h1>
+				</div>
+
+
+				<div class="searchdiv col-md-6">
+					<form class="form">
+						<input placeholder="SEARCH ANY TOPIC" class="search" id="searchunsp" type="search" />
+						<button class="btnsearch" id="btnSearchunsp"><i class="fa fa-search"></i></button>
+					</form>
+				</div>
+
+
+			</div>
+
+
+
+
+			<div class="row d-flex justify-content-center results">
+
+
+				<div class="card col-10 col-sm-8 col-md-2 ">
+					<img class="image" id="unspimg1" src="" alt="">
+					<h2 class="caption" id="unspimgcaption1"></h2>
+				</div>
+
+				<div class="card col-10 col-sm-8 col-md-2 ">
+					<img class="image" id="unspimg2" src="" alt="">
+					<h2 class="caption" id="unspimgcaption2"></h2>
+				</div>
+
+				<div class="card col-10 col-sm-8 col-md-2 ">
+					<img class="image" id="unspimg3" src="" alt="">
+					<h2 class="caption" id="unspimgcaption3"></h2>
+				</div>
+
+				<div class="card col-10 col-sm-8 col-md-2 ">
+					<img class="image" id="unspimg4" src="" alt="">
+					<h2 class="caption" id="unspimgcaption4"></h2>
+				</div>
+
+				<div class="card col-10 col-sm-8 col-md-2 ">
+					<img class="image" id="unspimg5" src="" alt="">
+					<h2 class="caption" id="unspimgcaption5"></h2>
+				</div>
+
+				<div class="card col-10 col-sm-8 col-md-2 ">
+					<img class="image" id="unspimg6" src="" alt="">
+					<h2 class="caption" id="unspimgcaption6"></h2>
+				</div>
+
+				<div class="card col-10 col-sm-8 col-md-2 ">
+					<img class="image" id="unspimg7" src="" alt="">
+					<h2 class="caption" id="unspimgcaption7"></h2>
+				</div>
+
+				<div class="card col-10 col-sm-8 col-md-2 ">
+					<img class="image" id="unspimg8" src="" alt="">
+					<h2 class="caption" id="unspimgcaption8"></h2>
+				</div>
+
+				<div class="card col-10 col-sm-8 col-md-2 ">
+					<img class="image" id="unspimg9" src="" alt="">
+					<h2 class="caption" id="unspimgcaption9"></h2>
+				</div>
+
+				<div class="card col-10 col-sm-8 col-md-2 ">
+					<img class="image" id="unspimg10" src="" alt="">
+					<h2 class="caption" id="unspimgcaption10"></h2>
+				</div>
+
+				<div class="card col-10 col-sm-8 col-md-2 ">
+					<img class="image" id="unspimg11" src="" alt="">
+					<h2 class="caption" id="unspimgcaption11"></h2>
+				</div>
+
+				<div class="card col-10 col-sm-8 col-md-2 ">
+					<img class="image" id="unspimg12" src="" alt="">
+					<h2 class="caption" id="unspimgcaption12"></h2>
+				</div>
+
+				<div class="card col-10 col-sm-8 col-md-2 ">
+					<img class="image" id="unspimg13" src="" alt="">
+					<h2 class="caption" id="unspimgcaption13"></h2>
+				</div>
+
+				<div class="card col-10 col-sm-8 col-md-2 ">
+					<img class="image" id="unspimg14" src="" alt="">
+					<h2 class="caption" id="unspimgcaption14"></h2>
+				</div>
+
+				<div class="card col-10 col-sm-8 col-md-2 ">
+					<img class="image" id="unspimg15" src="" alt="">
+					<h2 class="caption" id="unspimgcaption15"></h2>
+				</div>
+
+			</div>
+		</div>
+
+	</div>
+
+
+
+
+
+		<div class="section row">
+			<div class="col-12">
+				<div class="headrow row">
+
+
+		
 
 
 			<div class="titlediv col-md-6">
@@ -420,7 +459,7 @@
 
 			<div class="searchdiv col-md-6">
 				<form class="form">
-					<button class="search" id="get_meal">Get Meal 🍔</button>
+					<button class="button" id="get_meal">Get Meal </button>
 				</form>
 			</div>
 
@@ -430,29 +469,17 @@
 
 
 
-		<!-- <div class="row text-center">
-			<h3>
-				Feeling hungry?
-			</h3>
-			<h5>Get a random meal by clicking below</h5>
-			<button class="button-primary" id="get_meal">Get Meal 🍔</button>
-
-		</div> -->
+		
 
 
-		<div id="meal" class=" meal">
-			<!-- <p id="foodtitle"></p>
-			<p id="foodcategory"></p>
-			<p id="foodcountry"></p>
-			<p id="foodingredients"></p> -->
-		</div>
 
 
 		<div id="meals" class="row meal">
 		</div>
 
 
-	</section>
+	</div>
+	</div>
 
 
 

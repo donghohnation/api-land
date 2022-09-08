@@ -165,13 +165,45 @@ function getAdvice() {
 
 let APIKEY = "k97KrpZv1g8ZfdGW7o9ZVsQphqFCguwz";
 
+window.onload = init2();
+function init2() {
+	let url2 = `https://api.giphy.com/v1/gifs/search?api_key=${APIKEY}&limit=15&q=cat`;
+	
+	fetch(url2)
+		.then(response => response.json())
+		.then(content => {
+			for (var i = 0; i < 16; i++) {
+				console.log(content.data);
+				console.log("META", content.meta);
+				document.getElementById("gif" + (i + 1)).src = content.data[i].images.downsized.url;
+				document.getElementById("gif" + (i + 1)).alt = content.data[i].title;
+				document.getElementById("caption" + (i + 1)).innerHTML = content.data[i].title;
+			};
+		})
+		.catch(err => {
+			//   console.error(err);
+		});
+
+}
+
+
 
 document.addEventListener("DOMContentLoaded", init);
 
+const cards = document.getElementsByClassName("cardgif");
+
+// for (var i = 0; i < cards.length; i++) {
+// 	cards[i].style.visibility = "hidden";
+// }
+
 
 function init() {
+
+
 	document.getElementById("btnSearch").addEventListener("click", ev => {
+
 		ev.preventDefault(); //to stop the page reload
+
 		let url = `https://api.giphy.com/v1/gifs/search?api_key=${APIKEY}&limit=15&q=`;
 		let str = document.getElementById("search").value.trim();
 		url = url.concat(str);
@@ -191,16 +223,55 @@ function init() {
 			.catch(err => {
 				//   console.error(err);
 			});
+		// if (document.querySelector("#search").value !== "") {
+		// 	for (var i = 0; i < cards.length; i++) {
+		// 		cards[i].style.visibility = "visible";
+		// 	}
+		// }
 	});
 }
 
 
 
 
+
+
+
+
+
+
+
+
 const unspsearchbtn = document.getElementById("btnSearchunsp");
+const cardsunspl = document.getElementsByClassName("cardunspl");
+
+// for (var i = 0; i < cardsunspl.length; i++) {
+// 	cardsunspl[i].style.visibility = "hidden";
+// }
+
+window.onload = loadImg2();
+function loadImg2() {
+	const searchedunsp = document.getElementById("searchunsp");
+	fetch(`https://api.unsplash.com/search/photos?query=cat&per_page=20&client_id=e0lcFxGydphS57T0cGmgW1jizTfMapI4n6W9l5SxISU`)
+		.then(response => {
+			return response.json();
+		})
+		.then(imgdata => {
+
+			for (let i = 0; i < imgdata.results.length; i++) {
+
+				document.getElementById("unspimg" + (i + 1)).src = imgdata.results[i].urls.regular;
+				document.getElementById("unspimgcaption" + (i + 1)).innerHTML = imgdata.results[i].alt_description;
+
+			}
+		})
+
+}
 
 unspsearchbtn.addEventListener("click", loadImg);
+
 function loadImg(e) {
+
 	e.preventDefault();
 	const searchedunsp = document.getElementById("searchunsp");
 	fetch(`https://api.unsplash.com/search/photos?query=${searchedunsp.value}&per_page=20&client_id=e0lcFxGydphS57T0cGmgW1jizTfMapI4n6W9l5SxISU`)
@@ -216,6 +287,12 @@ function loadImg(e) {
 
 			}
 		})
+
+	// if (document.querySelector("#searchunsp").value !== "") {
+	// 	for (var i = 0; i < cardsunspl.length; i++) {
+	// 		cardsunspl[i].style.visibility = "visible";
+	// 	}
+	// }
 }
 
 
@@ -272,7 +349,7 @@ const createMeal = (meal) => {
     <div class="row d-flex justify-content-center resultsmeal">
 
 
-	 <div class="col-9 mealdiv">
+	 <div class="col-11 col-lg-9 mealdiv">
 
 
       	<h4 class="mealtitle">${meal.strMeal}</h4>

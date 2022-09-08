@@ -7,7 +7,7 @@
 	/* background-color: aquamarine; */
 	border: 2px solid black;
 	border-radius: 22px;
-	margin: 22px 110px;
+	margin: 22px 0px;
 	-webkit-border-radius: 22px;
 	-moz-border-radius: 22px;
 	-ms-border-radius: 22px;
@@ -53,6 +53,14 @@
 	margin: auto;
 	text-align: right;
 	/* background-color: rgb(209, 183, 134); */
+}
+
+@media (max-width: 768px) {
+
+	.headtitle,
+	.searchdiv {
+		text-align: center;
+	}
 }
 
 .textresultdiv {
@@ -131,7 +139,8 @@
 
 
 
-.card {
+.cardgif,
+.cardunspl {
 	border: none;
 	background-color: rgba(255, 0, 0, 0);
 	margin: 8px;
@@ -149,7 +158,7 @@
 	border-radius: 2px;
 	object-fit: cover;
 	object-position: center center;
-	/* width: 100%; */
+	width: 100%;
 	/* height: 100%; */
 	aspect-ratio: 1/1;
 }
@@ -249,8 +258,8 @@
 
 
 .resultsmeal {
-	margin: 32px 112px;
-	
+	margin: 32px 0px;
+
 	/* background-color: rgb(187, 212, 143); */
 }
 
@@ -279,20 +288,20 @@
 	aspect-ratio: 3/1.5;
 }
 
-.mealtextdiv{
+.mealtextdiv {
 	margin: 0px 0px;
 }
 
-.mealtext{
+.mealtext {
 	font-size: 14px;
 	line-height: 18px;
 }
 
-.mealinstructionstext{
+.mealinstructionstext {
 	font-size: 16px;
 	line-height: 20px;
 }
 
-.mealvideodiv{
+.mealvideodiv {
 	margin: 22px 0px;
 }
